@@ -9,11 +9,12 @@ applications:
         commands:
           - npm run build
     artifacts:
-      baseDirectory: /
+      baseDirectory: public
       files:
         - '**/*'
     cache:
-      paths: []
+      paths:
+        - node_modules/**/*
     appRoot: reactapp
   - frontend:
     phases:
@@ -24,9 +25,10 @@ applications:
         commands:
           - npm run build
     artifacts:
-      baseDirectory: /
-      files:
+      baseDirectory: public
+       files:
         - '**/*'
     cache:
-      paths: []
+      paths:
+        - node_modules/**/*
     appRoot: marketing-site
