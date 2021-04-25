@@ -15,7 +15,7 @@ applications:
     cache:
       paths:
         - node_modules/**/*
-    appRoot: reactapp
+    appRoot: /reactapp
   - frontend:
     phases:
       preBuild:
@@ -31,4 +31,4 @@ applications:
     cache:
       paths:
         - node_modules/**/*
-    appRoot: marketing-site
+    appRoot: /marketing-site
