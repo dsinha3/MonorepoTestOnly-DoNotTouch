@@ -1,6 +1,7 @@
 version: 2
 applications:
-  - frontend:
+  - appRoot: reactapp
+    frontend:
       phases:
         preBuild:
           commands:
@@ -15,8 +16,8 @@ applications:
       cache:
         paths:
           - node_modules/**/*
-      appRoot: reactapp
-  - frontend:
+  - appRoot: marketing-site
+    frontend:
       phases:
         preBuild:
           commands:
@@ -31,4 +32,3 @@ applications:
       cache:
         paths:
           - node_modules/**/*
-      appRoot: marketing-site
