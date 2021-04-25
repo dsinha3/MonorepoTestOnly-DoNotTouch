@@ -1,0 +1,32 @@
+version: 2
+applications:
+  - frontend:
+    phases:
+      preBuild:
+        commands:
+          - npm ci
+      build:
+        commands:
+          - npm run build
+    artifacts:
+      baseDirectory: /
+      files:
+        - '**/*'
+    cache:
+      paths: []
+    appRoot: reactapp
+  - frontend:
+    phases:
+      preBuild:
+        commands:
+          - npm ci
+      build:
+        commands:
+          - npm run build
+    artifacts:
+      baseDirectory: /
+      files:
+        - '**/*'
+    cache:
+      paths: []
+    appRoot: marketing-site
