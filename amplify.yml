@@ -1,21 +1,5 @@
 version: 2
 applications:
-  - appRoot: reactapp
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: build
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
   - appRoot: marketing-site
     frontend:
       phases:
@@ -27,6 +11,22 @@ applications:
             - npm run build
       artifacts:
         baseDirectory: public
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+  - appRoot: reactapp
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: build
         files:
           - '**/*'
       cache:
