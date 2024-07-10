@@ -1,0 +1,13 @@
+applications:
+  - appRoot: 'marketing-site'
+    customHeaders:
+    - pattern: '**'
+      headers:
+      - key: 'app1-header'
+        value: 'app1-value'
+  - appRoot: 'reactapp'
+    customHeaders:
+    - pattern: '**'
+      headers:
+      - key: 'app2-header'
+        value: 'app2-value'
